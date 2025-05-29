@@ -5,7 +5,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
-			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+			build = "make",
 		},
 		"nvim-tree/nvim-web-devicons",
 		"folke/todo-comments.nvim",
@@ -25,6 +25,7 @@ return {
 	},
 	config = function(_, opts)
 		require("telescope").setup(opts)
+		require("telescope").load_extension("fzf")
 		require("telescope").load_extension("todo-comments")
 		vim.keymap.set("n", "<leader><tab>t", "<cmd>TodoTelescope<cr>", { desc = "Find TODOs (Telescope)" })
 	end,

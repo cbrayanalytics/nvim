@@ -1,5 +1,6 @@
 return {
 	"stevearc/conform.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	opts = function()
 		return {
 			formatters_by_ft = {

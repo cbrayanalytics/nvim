@@ -42,8 +42,14 @@ km.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Telescope f
 km.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
 km.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Telescope buffers" })
 km.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Telescope help tags" })
+km.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Telescope recent files" })
 km.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
-
+km.set(
+	"n",
+	"<leader>fp",
+	"<cmd>NvimTreeOpen ~/.config/nvim/lua/casey/plugins/<cr>",
+	{ desc = "Telescope plugin files" }
+)
 -- Obsidian Keybindings --
 km.set("n", "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "Create new obsidian note" })
 km.set("n", "<leader>od", "<cmd>ObsidianToday<cr>", { desc = "Create new obsidian daily note(today)" })

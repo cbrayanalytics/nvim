@@ -41,17 +41,13 @@ return {
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
-				{ name = "render-markdown" },
 				{ name = "buffer" },
 				{ name = "path" },
 			}),
 			formatting = {
 				format = lspkind.cmp_format({
 					mode = "symbol",
-					maxwidth = {
-						menu = 50,
-						abbr = 50,
-					},
+					maxwidth = 50,
 					ellipsis_char = "...",
 					show_labelDetails = true,
 				}),

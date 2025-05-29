@@ -110,6 +110,7 @@ return {
 			end,
 		})
 
+		-- Diagnostic signs
 		vim.diagnostic.config({
 			signs = {
 				text = {
@@ -139,7 +140,7 @@ return {
 						},
 					},
 					filetypes = { "bash", "sh" },
-					root_dir = lspconfig.util.root_pattern(".git"),
+					root_dir = require("lspconfig.util").root_pattern(".git"),
 				},
 				pyright = {
 					settings = {
@@ -162,7 +163,7 @@ return {
 
 		require("mason-lspconfig").setup({
 			ensure_installed = { "bashls", "lua_ls", "pyright" },
-			automatic_enable = true,
+			automatic_installation = true,
 			handlers = {
 				function(server_name)
 					local server_opts = opts.servers[server_name] or {}
@@ -170,13 +171,6 @@ return {
 						capabilities = capabilities,
 					}, server_opts))
 				end,
-				-- If you want custom handlers for specific servers, you can add them here:
-				-- ["lua_ls"] = function()
-				--   lspconfig.lua_ls.setup({
-				--     capabilities = capabilities,
-				--     settings = opts.servers.lua_ls.settings,
-				--   })
-				-- end,
 			},
 		})
 	end,

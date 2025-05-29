@@ -4,9 +4,9 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	event = { "BufReadPre", "BufNewFile" },
-	opts = function()
+	config = function()
 		local lazy_status = require("lazy.status")
-		return {
+		require("lualine").setup({
 			options = {
 				theme = "auto", -- Auto-detect theme
 			},
@@ -47,6 +47,6 @@ return {
 					},
 				},
 			},
-		}
+		})
 	end,
 }
