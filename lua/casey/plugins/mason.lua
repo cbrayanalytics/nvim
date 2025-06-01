@@ -20,6 +20,7 @@ return {
 				"bashls",
 				"lua_ls",
 				"pyright",
+				"gopls",
 			},
 		})
 
@@ -32,6 +33,9 @@ return {
 				"shellcheck",
 				"luacheck",
 				"pylint",
+				"goimports",
+				"gofumpt",
+				"golines",
 			},
 		})
 	end,

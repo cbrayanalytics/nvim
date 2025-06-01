@@ -20,6 +20,12 @@ return {
 				"sql",
 				"terraform",
 				"yaml",
+				"gomod",
+				"gosum",
+				"gotmpl",
+				"goctl",
+				"go",
+				"gowork",
 			},
 			incremental_selection = {
 				enable = true,

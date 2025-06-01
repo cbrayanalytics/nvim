@@ -162,7 +162,7 @@ return {
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		require("mason-lspconfig").setup({
-			ensure_installed = { "bashls", "lua_ls", "pyright" },
+			ensure_installed = { "bashls", "lua_ls", "pyright", "gopls" },
 			automatic_installation = true,
 			handlers = {
 				function(server_name)

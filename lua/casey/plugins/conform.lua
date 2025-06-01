@@ -7,6 +7,7 @@ return {
 				lua = { "stylua" },
 				bash = { "shfmt", "prettier" },
 				python = { "isort", "black" },
+				go = { "goimports", "gofumpt", "golines" },
 			},
 			-- Use conform's built-in format-on-save
 			format_on_save = {
